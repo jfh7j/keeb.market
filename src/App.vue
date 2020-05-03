@@ -1,28 +1,43 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="app">
+  <nav-bar></nav-bar>
+  <div id="mainBody">
+    <search-form v-on:updateSearch="searchValue=$event"></search-form>
+    <main-table :searchValue = "searchValue"></main-table>
+    <h1>{{searchValue}}</h1>
   </div>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainTable from './components/MainTable.vue'
+import NavBar from './components/NavBar.vue'
+import SearchForm from './components/SearchForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MainTable,
+    NavBar,
+    SearchForm
+  },
+  data () {
+    return{
+      searchValue: ""
+    }
+    
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#mainBody{
+  max-width: 1140px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+tr{
+  text-align:left;
 }
 </style>
