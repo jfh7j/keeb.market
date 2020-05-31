@@ -1,4 +1,5 @@
 # keeb.market
+A website for scouting the mechanical keyboard market
 
 ## Project setup
 ```
