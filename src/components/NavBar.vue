@@ -11,7 +11,7 @@
                 <li></li>
             </ul>
             <span class="navbar-text">
-                Written by <a href="https://reddit.com/u/jfh7j">/u/jfh7j</a>
+                Written by <a href="https://reddit.com/u/bur3ku">/u/jfh7j</a>
             </span>
         </div>
     </nav>
